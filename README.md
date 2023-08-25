@@ -1,1 +1,1 @@
-# Maze
+# Pairs Precision
