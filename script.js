@@ -75,7 +75,6 @@ let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
 let counter = CARDS.length + 15;
 let isLose = false;
-// Fisher--Yates Algorithm -- https://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
     let counter = array.length,
         temp,
@@ -93,6 +92,10 @@ function win() {
     isPaused = true;
     modalTitle.innerHTML = `You win! 🙌🥳 Tries: ${CARDS.length + 15 - counter}`;
     modal.classList.add('modal--open');
+    
+    // Play the tick sound
+    const tickAudio = document.getElementById('tick-audio');
+    tickAudio.play();
 }
 
 function lose() {
