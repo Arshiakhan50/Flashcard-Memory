@@ -27,24 +27,24 @@ const CARDS = [
     },
     {
         id: 6,
-        name: 'node',
-        img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png'
+        name: 'Java',
+        img: 'https://cms.rootstack.com/sites/default/files/inline-images/java1_0.png'
     },
     {
         id: 7,
-        name: 'react',
+        name: 'React',
         img:
             'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/react_m1pmwj.png'
     },
     {
         id: 8,
-        name: 'angular',
+        name: 'Angular',
         img:
             'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/angular_qqblks.png'
     },
     {
         id: 9,
-        name: 'vuejs',
+        name: 'Vuejs',
         img:
             'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/vue_ctikzd.png'
     },
@@ -73,7 +73,7 @@ const modalTitle = document.querySelector('#modal-title');
 const modal = document.querySelector('#modal');
 let currentCards = [...CARDS, ...CARDS];
 let isPaused = false;
-let counter = CARDS.length + 10;
+let counter = CARDS.length + 15;
 let isLose = false;
 // Fisher--Yates Algorithm -- https://bost.ocks.org/mike/shuffle/
 function shuffle(array) {
@@ -135,7 +135,7 @@ function handleClick(e) {
             isPaused = false;
         }
         // Validate is already win
-        const isWin = cardContainer.querySelectorAll('card--guessed').length === currentCards.length;
+        const isWin = cardContainer.querySelectorAll('.card--guessed').length === currentCards.length;
         if (isWin) {
             win();
         }
