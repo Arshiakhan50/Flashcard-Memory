@@ -16,9 +16,9 @@ const CARDS = [
     },
     {
         id: 4,
-        name: 'safari',
+        name: 'C#',
         img:
-            'https://res.cloudinary.com/henryzarza/image/upload/v1601735663/General%20assets/safari_mw13q8.png'
+            'https://miro.medium.com/v2/resize:fit:300/1*A_Hg7NPIoARg0RmdsVapqg.png'
     },
     {
         id: 5,
@@ -44,15 +44,15 @@ const CARDS = [
     },
     {
         id: 9,
-        name: 'Vuejs',
+        name: 'PHP',
         img:
-            'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/vue_ctikzd.png'
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png'
     },
     {
         id: 10,
-        name: 'svelte',
+        name: 'SQL',
         img:
-            'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/svelte_keupr5.png'
+            'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png'
     },
     {
         id: 11,
@@ -91,9 +91,10 @@ function shuffle(array) {
 }
 function win() {
     isPaused = true;
-    modalTitle.innerHTML = 'You win! 🙌🥳';
+    modalTitle.innerHTML = `You win! 🙌🥳 Tries: ${CARDS.length + 15 - counter}`;
     modal.classList.add('modal--open');
 }
+
 function lose() {
     isLose = true;
     modalTitle.innerHTML = 'You lose 😢😩';
