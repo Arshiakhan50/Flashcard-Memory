@@ -160,7 +160,7 @@ function drawCards() {
           <div class="card__back">
             <img
               class="back__img"
-              src="https://res.cloudinary.com/henryzarza/image/upload/v1601745355/General%20assets/thought_pr1pzv.png"
+              src="https://images.emojiterra.com/google/android-12l/512px/1f914.png"
               alt="Thought"
             />
           </div>
