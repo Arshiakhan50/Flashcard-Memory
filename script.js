@@ -92,10 +92,6 @@ function win() {
     isPaused = true;
     modalTitle.innerHTML = `You win! 🙌🥳 Tries: ${CARDS.length + 15 - counter}`;
     modal.classList.add('modal--open');
-    
-    // Play the tick sound
-    const tickAudio = document.getElementById('tick-audio');
-    tickAudio.play();
 }
 
 function lose() {
@@ -120,6 +116,10 @@ function handleClick(e) {
                 target.classList.add('card--guessed');
                 picked.classList.add('card--guessed');
                 isPaused = false;
+                
+                // Play the tick sound
+                const tickAudio = document.getElementById('tick-audio');
+                tickAudio.play();
             } else {
                 target.classList.add('card--picked');
                 setTimeout(() => {
@@ -138,13 +138,14 @@ function handleClick(e) {
             target.classList.add('card--picked');
             isPaused = false;
         }
-        // Validate is already win
+        // Validate if already win
         const isWin = cardContainer.querySelectorAll('.card--guessed').length === currentCards.length;
         if (isWin) {
             win();
         }
     }
 }
+
 function drawCards() {
     cardContainer.innerHTML = '';
     available.innerHTML = counter;
