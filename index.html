@@ -17,6 +17,8 @@
         <source src="tick.mp3" type="audio/mpeg">
     </audio>
 
+    <button id="mute-button" class="mute-button" style="font-size: 20px;">🔇</button>
+
     <main class="content">
         <header class="header">
             <h1 class="title">Pairs Precision</h1>
@@ -38,6 +40,19 @@
     <script>
         const backgroundAudio = document.getElementById('background-audio');
         backgroundAudio.volume = 0.1; 
+        document.addEventListener('DOMContentLoaded', function () {
+            const muteButton = document.getElementById('mute-button');
+            
+            muteButton.addEventListener('click', function () {
+                if (backgroundAudio.volume === 0) {
+                    backgroundAudio.volume = 0.1;
+                    muteButton.textContent = '🔇';
+                } else {
+                    backgroundAudio.volume = 0;
+                    muteButton.textContent = '🔊';
+                }
+            });
+        });
     </script>
 </body>
 </html>
