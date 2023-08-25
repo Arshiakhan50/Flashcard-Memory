@@ -14,8 +14,8 @@
     </audio>
 
     <audio id="tick-audio">
-      <source src="tick.mp3" type="audio/mpeg">
-  </audio>
+        <source src="tick.mp3" type="audio/mpeg">
+    </audio>
 
     <main class="content">
         <header class="header">
@@ -35,5 +35,9 @@
     </div>
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script>
+        const backgroundAudio = document.getElementById('background-audio');
+        backgroundAudio.volume = 0.1; 
+    </script>
 </body>
 </html>
